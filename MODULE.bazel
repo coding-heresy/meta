@@ -1,5 +1,5 @@
 
 module(
-    name = "meta",
+    name = "ericniebler_meta",
     version = "1.0.0",
 )
