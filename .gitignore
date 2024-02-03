@@ -221,3 +221,9 @@ Desktop.ini
 
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
+
+# =========================
+# Bazel junk
+# =========================
+bazel-*
+MODULE.bazel.lock
