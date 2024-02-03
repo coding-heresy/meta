@@ -1,0 +1,10 @@
+
+cc_library(
+    name = "meta",
+    visibility = ["//visibility:public"],
+    hdrs = [
+        "include/meta/meta.hpp",
+        "include/meta/meta_fwd.hpp",
+    ],
+    includes = ["include"],
+)

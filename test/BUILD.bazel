@@ -1,0 +1,16 @@
+
+cc_library(
+    name = "simple_test",
+    visibility = ["//visibility:public"],
+    hdrs = ["simple_test.hpp"],
+    includes = ["."],
+    deps = ["//:meta"],
+)
+
+cc_test(
+    name = "test.meta",
+    srcs = ["meta.cpp"],
+    deps = [
+        ":simple_test",
+    ],
+)

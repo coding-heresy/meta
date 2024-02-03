@@ -1,0 +1,41 @@
+
+# use bzlmod
+common --enable_bzlmod
+
+# build with C++20 by default
+build --cxxopt='-std=c++20'
+
+# taken from CMakeLists.txt
+build --cxxopt='-ftemplate-backtrace-limit=0'
+build --cxxopt='-Wall'
+build --cxxopt='-Wextra'
+build --cxxopt='-Werror'
+build --cxxopt='-pedantic-errors'
+
+#build:clang --cxxopt='-Weverything'
+#build:clang --cxxopt='-Wno-c++98-compat'
+#build:clang --cxxopt='-Wno-c++98-compat-pedantic'
+#build:clang --cxxopt='-Wno-old-style-cast'
+#build:clang --cxxopt='-Wdocumentation'
+#build:clang --cxxopt='-Wno-documentation-unknown-command'
+#build:clang --cxxopt='-Wno-missing-prototypes'
+
+#build:gcc --cxxopt='-Wall'
+#build:gcc --cxxopt='-Wextra'
+#build:gcc --cxxopt='-pedantic'
+#build:gcc --cxxopt='-Wno-error=deprecated-declarations'
+#build:gcc --cxxopt='-Wno-missing-field-initializers'
+#build:gcc --cxxopt='-Wno-unused-parameter'
+
+# debug build
+build:dbg --cxxopt='-O0'
+build:dbg --cxxopt='-fno-inline'
+build:dbg --cxxopt='-g3'
+build:dbg --cxxopt='-fstack-protector-all'
+
+# optimized build
+build:opt --cxxopt='-Ofast'
+build:opt --cxxopt='-g0'
+build:opt --cxxopt='-march=native'
+build:opt --cxxopt='-mtune=native'
+build:opt --cxxopt='-DNDEBUG'
